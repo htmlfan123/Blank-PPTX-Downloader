@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Blank PPTX</title>
+    <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.min.js"></script>
+</head>
+<body>
+
+    <button onclick="downloadPptx()">Download Blank PPTX</button>
+
+    <script>
+        function downloadPptx() {
+            const pptx = new PptxGenJS();
+            pptx.layout = 'LAYOUT_WIDE';
+            pptx.addSlide();
+            pptx.writeFile({
+                fileName: 'blank-presentation.pptx'
+            });
+        }
+    </script>
+
+</body>
+</html>
